@@ -40,6 +40,20 @@ The booking router provides endpoints to create and retrieve bookings.
 #### Endpoints
 
 - `GET /api/bookings`: Retrieve all bookings.
+- `POST /api/bookings`: Create a new booking.
+
+#### Example
+
+To create a new booking, send a POST request to `/api/bookings` with the following JSON body:
+```json
+{
+  "startDate": "2023-10-01",
+  "endDate": "2023-10-10",
+  "userId": 1,
+  "propertyId": 1
+}
+```
+
 To retrieve all bookings, send a GET request to `/api/bookings`.
 
 ## Running the Application
@@ -49,6 +63,15 @@ To retrieve all bookings, send a GET request to `/api/bookings`.
     npm run dev
     ```
 2. The application will be available at `http://localhost:3000`.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a pull request.
 
 ## License
 
