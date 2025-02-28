@@ -1,0 +1,54 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id    Int    @id @default(autoincrement())
+  name  String
+  email String @unique
+  // Relations
+  properties Property[]
+  bookings   Booking[]
+  reviews    Review[]
+}
+
+model Property {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  price       Float
+  location    String
+  ownerId     Int
+  // Relations
+  owner       User     @relation(fields: [ownerId], references: [id])
+  bookings    Booking[]
+  reviews     Review[]
+}
+
+model Booking {
+  id         Int      @id @default(autoincrement())
+  startDate  DateTime
+  endDate    DateTime
+  userId     Int
+  propertyId Int
+  // Relations
+  user       User     @relation(fields: [userId], references: [id])
+  property   Property @relation(fields: [propertyId], references: [id])
+}
+
+model Review {
+  id         Int      @id @default(autoincrement())
+  rating     Int
+  comment    String
+  userId     Int
+  propertyId Int
+  // Relations
+  user       User     @relation(fields: [userId], references: [id])
+  property   Property @relation(fields: [propertyId], references: [id])
+}
