@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import express from 'express';
+import { verifyCognitoToken } from './middleware/authMiddleware';
 import bookingRouter from './routers/bookingRouter';
 import propertyRouter from './routers/propertyRouter';
 import reviewRouter from './routers/reviewRouter';
@@ -14,6 +15,8 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.send('Hello, world!');
 });
+
+app.use(verifyCognitoToken);
 
 app.use('/users', userRouter);
 app.use('/properties', propertyRouter);
