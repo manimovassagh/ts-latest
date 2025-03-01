@@ -51,6 +51,7 @@ The booking router provides endpoints to create and retrieve bookings.
 #### Example
 
 To create a new booking, send a POST request to `/api/bookings` with the following JSON body:
+
 ```json
 {
   "startDate": "2023-10-01",
@@ -65,9 +66,11 @@ To retrieve all bookings, send a GET request to `/api/bookings`.
 ## Running the Application
 
 1. Start the development server:
+
     ```bash
     npm run dev
     ```
+
 2. The application will be available at `http://localhost:3000`.
 
 ## Contributing
