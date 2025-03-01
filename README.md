@@ -14,7 +14,7 @@ This project is a TypeScript-based application that includes a booking system. T
 
     ```bash
     git clone https://github.com/yourusername/ts-latest.git
-    ```
+    ```json
 
 2. Navigate to the project directory:
 
@@ -31,7 +31,8 @@ This project is a TypeScript-based application that includes a booking system. T
 ## Environment Variables
 
 Create a `.env` file in the root directory and add the following environment variables:
-```
+
+``` env
 DATABASE_URL=your_database_url
 PORT=3000
 ```
