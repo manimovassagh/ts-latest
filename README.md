@@ -11,14 +11,19 @@ This project is a TypeScript-based application that includes a booking system. T
 ## Installation
 
 1. Clone the repository:
+
     ```bash
     git clone https://github.com/yourusername/ts-latest.git
     ```
+
 2. Navigate to the project directory:
+
     ```bash
     cd ts-latest
     ```
+
 3. Install the dependencies:
+
     ```bash
     npm install
     ```
