@@ -6,7 +6,6 @@ declare module 'express-serve-static-core' {
   }
 }
 
-
 // Mock verification function for development
 export const verifyCognitoToken = (req: Request, res: Response, next: NextFunction) => {
   // Mock user data
