@@ -63,6 +63,7 @@ To create a new booking, send a POST request to `/api/bookings` with the followi
 
 To retrieve all bookings, send a GET request to `/api/bookings`.
 
+
 ## Running the Application
 
 1. Start the development server:
